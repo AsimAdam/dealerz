@@ -1,15 +1,15 @@
 {
-  "name": "react_exercise",
+  "name": "dealerz",
   "private": true,
   "version": "0.0.0",
-  "homepage": "https://AsimAdam.github.io/react-gh-pages",
+  "homepage": "https://AsimAdam.github.io/dealerz",
   "type": "module",
   "scripts": {
-    "predeploy": "npm run build",
-    "deploy": "gh-pages -d build",
     "dev": "vite",
     "build": "vite build",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d dist"
   },
   "dependencies": {
     "@chakra-ui/icons": "^2.0.18",
