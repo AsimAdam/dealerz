@@ -8,6 +8,7 @@ import "./App.css";
 import Headbar from "./components/header/Headbar";
 import Icons from "./components/header/Icons";
 import Banner from "./components/Banner";
+import Sidebar from "./components/Sidebar";
 
 
 
@@ -60,9 +61,12 @@ const App = () => {
             <Button num={addedItems.length} click={setShowAddProducts} />
           </div>
         </div>
+        
       <div>
       <Banner />
       </div>
+
+      <Sidebar />
 
         {showAddProducts && (
           <AddProducts
@@ -78,6 +82,8 @@ const App = () => {
           removeItem={removeItem}
           addedItems={addedItems}
         />
+
+        
         
       </div>
     </div>

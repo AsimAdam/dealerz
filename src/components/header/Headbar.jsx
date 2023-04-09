@@ -9,7 +9,7 @@ function Headbar() {
 
   return (
     <div className='bar'>
-     <Flex p="10px" gap={8} flexDirection="row" alignItems="center" >
+     <Flex p="10px" gap={8} flexDirection="row" alignItems="center" bg="white" >
     <Image src='https://i.postimg.cc/KzLL5fZ1/Dealerz.png' alt="" />
      <Spacer />
      
