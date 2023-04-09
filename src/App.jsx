@@ -4,9 +4,14 @@ import Search from "./components/search/Search";
 import AddProducts from "./components/Products/AddProducts";
 import CardBody from "./components/cards/CardBody";
 import Button from "./components/button/Button";
-
 import "./App.css";
 import Headbar from "./components/header/Headbar";
+import Icons from "./components/header/Icons";
+import Banner from "./components/Banner";
+
+
+
+
 const App = () => {
   const [items, setItem] = useState([]);
   const [searchValue, setSearchValue] = useState("");
@@ -51,9 +56,13 @@ const App = () => {
               value={searchValue}
               onChangeData={changingSrarchData}
             />
+            <Icons />
             <Button num={addedItems.length} click={setShowAddProducts} />
           </div>
         </div>
+      <div>
+      <Banner />
+      </div>
 
         {showAddProducts && (
           <AddProducts

@@ -2,14 +2,17 @@ import React, { useEffect } from "react";
 import "./Card.css";
 // import { AddRemoveBtn } from "../addremoveBtn/AddRemoveBtn";
 import { useState } from "react";
-const Card = ({ product, addItem, removeItem, addedItems }) => {
-  const [isAdded, setIsAdded] = useState(true);
-  const item = addedItems.filter((addedItem) => addedItem.id == product.id);
-  useEffect(() => {
-    item.length == 0 ? setIsAdded(true) : setIsAdded(false);
-  }, [item]);
+import { productType, addItemType, CardProps } from "../../types";
 
-  // console.log(item);
+const Card = (props: CardProps) => {
+  const { product, addItem, removeItem, addedItems } = props;
+  const [isAdded, setIsAdded] = useState(true);
+
+  useEffect(() => {
+    const item = addedItems.filter((addedItem) => addedItem.id === product.id);
+    item.length === 0 ? setIsAdded(true) : setIsAdded(false);
+  }, [product, addedItems]);
+
   return (
     <div className="card">
       <img className="card__img" src={product.image} alt="" />

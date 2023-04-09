@@ -5,6 +5,7 @@
   --color-waring: green;
   --color-white: #fff;
   --color-danger: #ff0000;
+  background: #E5E5E5;
 }
 ::-webkit-scrollbar {
   display: none;

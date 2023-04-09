@@ -1,7 +1,6 @@
 import React from 'react'
-import { PhoneIcon } from '@chakra-ui/icons';
-import LocalShippingIcon from '@mui/icons-material/LocalShipping';
-import { Flex, HStack, Spacer, Text } from '@chakra-ui/react';
+import { Flex, Spacer, Text, Image } from '@chakra-ui/react';
+
 
 
 
@@ -10,13 +9,18 @@ function Headbar() {
 
   return (
     <div className='bar'>
-     <Flex p="10px" gap={8} flexDirection="row" >
-     <h1 className='logo' color='#F86338'>Dealerz</h1>
+     <Flex p="10px" gap={8} flexDirection="row" alignItems="center" >
+    <Image src='https://i.postimg.cc/KzLL5fZ1/Dealerz.png' alt="" />
      <Spacer />
-      <PhoneIcon mt="8px"/>
-      <Text>Call Center</Text>
-      <LocalShippingIcon mt="8px" />
-       <Text>Shipping & Returns</Text>
+     
+      <Image src='https://i.postimg.cc/1XsgrZCd/Vector-1.png' alt="" w={20} h={20} />
+      <a href='#'style={{textDecoration: "none"}} >
+      <Text color="black" >Call Center</Text>
+      </a>
+      <Image src="https://i.postimg.cc/858fsvhN/Vector-2.png" alt="" w={20} h={20}/>
+      <a href='#' style={{textDecoration: "none"}}>
+       <Text color="black" >Shipping & Returns</Text>
+       </a>
        </Flex>
    
     </div>
