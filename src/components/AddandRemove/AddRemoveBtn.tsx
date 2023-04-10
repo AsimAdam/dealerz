@@ -2,8 +2,6 @@ import React from "react";
 
 
 
-
-
 export function AddRemoveBtn({
   isAdded,
   addItem,

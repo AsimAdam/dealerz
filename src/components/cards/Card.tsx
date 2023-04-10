@@ -1,10 +1,13 @@
 import React, { useEffect } from "react";
 import "./Card.css";
-// import { AddRemoveBtn } from "../addremoveBtn/AddRemoveBtn";
 import { useState } from "react";
-import { productType, addItemType, CardProps } from "../../types";
+import { CardProps } from "../../types";
+
+
+
 
 const Card = (props: CardProps) => {
+
   const { product, addItem, removeItem, addedItems } = props;
   const [isAdded, setIsAdded] = useState(true);
 

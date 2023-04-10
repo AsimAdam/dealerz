@@ -1,5 +1,5 @@
 import './Banner.css';
-import { Flex, Image, Box } from '@chakra-ui/react';
+import { Flex, Image } from '@chakra-ui/react';
 
 
 
@@ -9,10 +9,18 @@ const Banner = () => {
 
     return (
         
-      <Flex w="1490px" h="512" bg="white" mb="50px" >
+      <Flex 
+        w="1490px" 
+        h="512" 
+        bg="white" 
+        mb="50px" >
 
 
-             <Image src="https://i.postimg.cc/VL42PFW3/Ellipse-153.png" alt="" w="100" h="100"
+             <Image 
+              src="https://i.postimg.cc/VL42PFW3/Ellipse-153.png" 
+              alt="" 
+              w="100" 
+              h="100"
               ml={30}
               mt={50}
               mr={200}

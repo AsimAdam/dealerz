@@ -1,7 +1,20 @@
 import React from "react";
 import Card from "./Card";
 import "./CardBody.css";
-const CardBody = ({ products, addItem, removeItem, addedItems }) => {
+import { productType, CardProps } from "../../types";
+
+
+interface CardBodyProps {
+    
+  products: productType[]; 
+  addItem: (id: number) => void;
+  removeItem: (id: number) => void;
+  addedItems: number[];
+  isAdded: boolean,
+}
+
+
+const CardBody = ({ products, addItem, removeItem, addedItems }: CardBodyProps & CardProps ) => {
   products.map((product) => (product.isAdded = true));
   return (
     <div className="card__body">

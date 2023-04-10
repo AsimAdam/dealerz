@@ -2,6 +2,10 @@ import React from "react";
 import CardList from "./CardList";
 import "./AddProducts.css";
 import { useRef } from "react";
+
+
+
+
 const AddProducts = ({ items, click, removeItem, setAddedItem }) => {
   const total = items
     .reduce((pre, cur) => {
@@ -13,6 +17,7 @@ const AddProducts = ({ items, click, removeItem, setAddedItem }) => {
   const showDivRef = useRef(null);
 
   return (
+    
     <div ref={showDivRef} className="addproducts__container">
       <div className="left-side">
         <div className="check-out-container">

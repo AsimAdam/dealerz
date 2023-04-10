@@ -1,6 +1,5 @@
 import React from "react";
 import "./Button.css";
-import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
 import { Image } from "@chakra-ui/react";
 
 
