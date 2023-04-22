@@ -1,7 +1,11 @@
 import React, { useReducer, useEffect } from "react";
 import "./CardList.css";
+
+
+
+
 function reducer(state, action) {
-  // console.log(state);
+
   if (action.type === "INCREASE") {
     return {
       ...state,
@@ -17,6 +21,7 @@ function reducer(state, action) {
     };
   }
 }
+  
 const CardList = ({ item, removeItem, setAddedItem, itemsArr }) => {
   const [state, dispatch] = useReducer(reducer, item);
 
@@ -27,6 +32,7 @@ const CardList = ({ item, removeItem, setAddedItem, itemsArr }) => {
     });
     setAddedItem(newArr);
   }, [state]);
+  
 
   return (
     <div className="card-list-body">

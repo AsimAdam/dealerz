@@ -1,7 +1,9 @@
 import { Flex  } from "@chakra-ui/react";
-import Categories from "./Ctegories";
+import FeaturedProducts from "./cards/FeaturedProducts";
+import Categories from "./Categories";
 import PriceSlider from "./PriceSlider";
 import SearhBar from "./SearchBar";
+
 
 
 
@@ -19,6 +21,7 @@ const Sidebar = () => {
           <SearhBar />
           <PriceSlider />
           <Categories />
+          <FeaturedProducts />
           </Flex>
     );
 

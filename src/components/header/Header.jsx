@@ -4,6 +4,7 @@ import "./Header.css";
 
 
 
+
 const Header = () => {
   return (
   <>
@@ -13,6 +14,7 @@ const Header = () => {
       <a href="#">Promo</a>
       <a href="#">About</a>
       <a href="#">Blog</a>
+      
     </header>
   
     </>

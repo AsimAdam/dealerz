@@ -1,6 +1,6 @@
 import React from "react";
 import "./Search.css";
-import { InputGroup, InputLeftElement } from "@chakra-ui/react";
+import { Input, InputGroup } from "@chakra-ui/react";
 import { SearchIcon } from "@chakra-ui/icons";
 
 
@@ -11,18 +11,12 @@ const Search = ({ value, onChangeData }) => {
     <div>
     
      <InputGroup>
-      <InputLeftElement
-        pointerEvents="none"
-       
-      />
-    
-      <input
-        className="search__input"
-        type="text"
+      <Input
+        w="573px" h="56px"
+        borderColor=""
         placeholder="Search what you need"
-        value={value}
-        onChange={onChangeData}
-      />
+        border="none"
+        />
       <span className="search__icon"><SearchIcon color="gray.700" /></span>
       </InputGroup>
     </div>

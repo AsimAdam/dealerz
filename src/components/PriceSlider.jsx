@@ -1,10 +1,13 @@
 import { useState, useEffect } from "react";
-import { Slider, SliderTrack, SliderFilledTrack, SliderThumb, Box, Text, Image, Flex, Spacer } from "@chakra-ui/react";
+import { Box, Text, Image, Flex, Spacer, RangeSlider, RangeSliderTrack, RangeSliderFilledTrack, RangeSliderThumb } from "@chakra-ui/react";
 import axios from "axios";
+import { useTheme } from "@emotion/react";
 
 
 
 const PriceSlider = () => {
+
+  const theme = useTheme()
 
   const [priceRange, setPriceRange] = useState([0, 1000]);
 
@@ -21,20 +24,16 @@ const PriceSlider = () => {
       }, []);
 
       return (
+        
         <Box p={4}>
       
-      <Slider
-        aria-label="Price range slider"
-        defaultValue={priceRange}
-        min={priceRange[0]}
-        max={priceRange[1]}
-        onChange={values => setPriceRange(values)}
-      >
-        <SliderTrack>
-          <SliderFilledTrack />
-        </SliderTrack>
-        <SliderThumb />
-        </Slider>
+         <RangeSlider aria-label={['min', 'max']} defaultValue={priceRange}>
+          <RangeSliderTrack>
+            <RangeSliderFilledTrack />
+          </RangeSliderTrack>
+          <RangeSliderThumb index={0} />
+          <RangeSliderThumb index={1} />
+        </RangeSlider>
     
       <Flex flexDirection="column" mt="30px">
 
@@ -46,10 +45,8 @@ const PriceSlider = () => {
 
         
         <Flex alignItems="center" mt="30px">
-
         <Text>Range</Text>
         <Spacer />
-        
         <Box ml="155px">${priceRange[0]}</Box>
         <Text ml="5px" mr="5px">to</Text>
         <Box>${priceRange[1]}</Box>
